@@ -126,26 +126,128 @@ const { element } = require("prop-types");
 // }
 
 // console.log(res);
-// if11. Uchta son berilgan. Shu sonlarni o`ratachasi (ya'ni katta va kichik sonlar orasidagi son) ni aniqlovchi programma tuzilsin.
+//! if11. Uchta son berilgan. Shu sonlarni o`ratachasi (ya'ni katta va kichik sonlar orasidagi son) ni aniqlovchi programma tuzilsin.
+// let res,
+//   a = 9,
+//   b = 7,
+//   c = 8;
 
-// if12. Uchta son berilgan. Shu sonlarning yig'indisi eng katta bo'ladigan ikkitasini ekranga chiqaruvchi programma tuzilsin.
+// if ((a < b && a > c) || (a > b && a < c)) {
+//   res = a;
+// } else if ((a > b && b > c) || (b > a && c > b)) {
+//   res = b;
+// } else if ((a > c && c > b) || (b > c && b > a)) {
+//   res = c;
+// }
 
-// if13. A, B, C haqiqiy sonlari berilgan. Agar berilgan sonlar o`sish tartibida berilgan bo`lsa, sonlarni ikkilantiring, aks holda sonlarni ishorasi o'zgartirilsin. A, B, C ning qiymatlari ekranga chiqarilsin.
+// console.log(res);
+//! if12. Uchta son berilgan. Shu sonlarning yig'indisi eng katta bo'ladigan ikkitasini ekranga chiqaruvchi programma tuzilsin.
+// let res,
+//   a = 9,
+//   b = 7,
+//   c = 8;
 
-// if14. A, B, C haqiqiy sonlari berilgan. Agar berilgan sonlar o'sish yoki kamayish tartibida berilgan bo`lsa, sonlarni ikkilantiring, aks holda sonlarni ishorasi o'zgartirilsin. A, B, C ning qiymatlari ekranga chiqarilsin.
+// if (a + b > b + c && a + c > b + c) {
+//   res = a + b;
+// } else if (a + c > b + c && a + c > a + b) {
+//   res = a + c;
+// } else {
+//   res = b + c;
+// }
 
-// if15. To`rtta butun son berilgan. Shu sonlarni uchtasi o`zaro teng, qolgan bittasini tartib raqami aniqlansin.
+// console.log(res);
+//! if13. A, B, C haqiqiy sonlari berilgan. Agar berilgan sonlar o`sish tartibida berilgan bo`lsa, sonlarni ikkilantiring, aks holda sonlarni ishorasi o'zgartirilsin. A, B, C ning qiymatlari ekranga chiqarilsin.
+// let res,
+//   a = 9,
+//   b = 7,
+//   c = 8;
 
-// if16. x haqiqiy soni berilgan. Quyidagi funksiya hisoblansin.
+// if (a > b && b > c) {
+//   a = 2 * a;
+//   b = 2 * b;
+//   c = 2 * c;
+// } else {
+//   (a = -a), (b = -b), (c = -c);
+// }
+
+// console.log(a, b, c);
+//! if14. A, B, C haqiqiy sonlari berilgan. Agar berilgan sonlar o'sish yoki kamayish tartibida berilgan bo`lsa, sonlarni ikkilantiring, aks holda sonlarni ishorasi o'zgartirilsin. A, B, C ning qiymatlari ekranga chiqarilsin.
+// let res,
+//   a = 9,
+//   b = 7,
+//   c = 8;
+
+// if ((a > b && b > c) || (a< b && b < c)) {
+//   a = 2 * a;
+//   b = 2 * b;
+//   c = 2 * c;
+// } else {
+//   (a = -a), (b = -b), (c = -c);
+// }
+
+// console.log(a, b, c);
+//! if15. To`rtta butun son berilgan. Shu sonlarni uchtasi o`zaro teng, qolgan bittasini tartib raqami aniqlansin.
+// let res,
+//   a = 1,
+//   b = 2,
+//   c = 2,
+//   d = 2;
+
+// if (a == b && b == c && c !== d) {
+//   res = `${d} - bu 4-raqam`;
+// } else if (a == b && b == d && d !== c) {
+//   res = `${c} - bu 3-raqam`;
+// } else if (a == c && c == d && d != b) {
+//   res = `${b} - bu 2-raqam`;
+// } else {
+//   res = `${a} - bu 1-raqam`;
+// }
+// console.log(res);
+//! if16. x haqiqiy soni berilgan. Quyidagi funksiya hisoblansin.
 
 // agar x≤ 0 bo’lsa -x;
 // agar 0<x<2; x^2
 // agar x≥2 bo’lsa 4
 
+// if (x <= 0) {
+//   -x;
+// } else if (x > 0 && x > 2) {
+//   x ** 2;
+// } else {
+//   x = 4;
+// }
+
 // if17. Yil berilgan (musbat butun son). Berilgan yilda nechta kun borligini aniqlovchi programma tuzilsin. Kabisa yilida 366 kun bor, kabisa bo'lmagan yilda 365 kun bor. Kabisa yil deb 4 ga karrali yillarga aytiladi. Lekin 100 ga karrali yillar ichida faqat 400 ga karrali bo'lganlari kabisa yil hisoblanadi. Masalan 300, 1300 va 1900 kabisa yili emas. 1200 va 2000 kabisa yili.
+// let year = 2024; // bu yerda yilingizni kiriting
+// let days;
 
-// if18. 1-999 oraliqdagi sonlar berilgan. Berilgan sonni "ikki xonali juft son", "uch xonali toq son" va x.k. ekranga yozadigan programma tuzilsin.
+// if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+//   days = 366; // Kabisa yili
+// } else {
+//   days = 365; // Kabisa yili emas
+// }
 
+// console.log(`${year}-yil ${days} kun`);
+
+//! if18. 1-999 oraliqdagi sonlar berilgan. Berilgan sonni "ikki xonali juft son", "uch xonali toq son" va x.k. ekranga yozadigan programma tuzilsin.
+// let abc = 123;
+// let res;
+
+// if (abc > 0 && abc < 9 && abc % 2 == 0) {
+//   res = "Bir xonali juft son";
+// } else if (abc > 0 && abc < 9 && abc % 2 !== 0) {
+//   res = "Bir xonali toq son ";
+// } else if (abc > 9 && abc < 100 && abc % 2 == 0) {
+//   res = "Ikki xonali juft son";
+// } else if (abc > 9 && abc < 100 && abc % 2 !== 0) {
+//   res = "Ikki xonali toq son";
+// } else if (abc > 100 && abc < 1000 && abc % 2 == 0) {
+//   res = " Uch xonali juft son";
+// } else if (abc > 100 && abc < 1000 && abc % 2 !== 0) {
+//   res = " Uch xonali toq son";
+// }
+
+// console.log(res);
 //
 
 // Case1. K butun soni berilgan. Baho natijalarini chiqaruvchi programma tuzing.(1-yomon, 2-qoniqarsiz, 3-qoniqarli, 4-yahshi, 5-a'lo). Agar k soni 1-5 gacha oraliqqa tegishli bo`lmasa "xato" deb chiqarilsin.
